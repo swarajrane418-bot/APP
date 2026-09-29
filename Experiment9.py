@@ -1,0 +1,10 @@
+import re
+text="""
+Hello Students! For any queries, contact abc@gmail.com or teacher123@gmail.edu.
+You can also contact support@yahoo.com.
+"""
+email_pattern=r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+emails=re.findall(email_pattern,text)
+print("Email addresses found:")
+for email in emails:
+    print(email)
